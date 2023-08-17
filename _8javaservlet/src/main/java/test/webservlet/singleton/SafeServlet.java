@@ -1,4 +1,4 @@
-package belajar.webservlet;
+package test.webservlet.singleton;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
