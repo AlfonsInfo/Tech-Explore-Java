@@ -23,7 +23,6 @@
 ## Java Lambda
 - Anonymous Class vs Lambda - Method Reference
 - MapForEach
-## Java Stream
 
 ## Java Stream
 - Stream Empty
