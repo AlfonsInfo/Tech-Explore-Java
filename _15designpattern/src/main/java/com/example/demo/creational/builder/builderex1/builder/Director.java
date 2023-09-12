@@ -1,6 +1,6 @@
-package com.example.demo.builder.builderex1.builder;
+package com.example.demo.creational.builder.builderex1.builder;
 
-import com.example.demo.builder.builderex1.Product;
+import com.example.demo.creational.builder.builderex1.Product;
 
 // Director class : Bersifat Opsional
 public class   Director {

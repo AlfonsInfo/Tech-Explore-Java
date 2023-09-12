@@ -1,4 +1,4 @@
-package com.example.demo.builder.builderex1;
+package com.example.demo.creational.builder.builderex1;
 
 public class Product {
     private String part1;

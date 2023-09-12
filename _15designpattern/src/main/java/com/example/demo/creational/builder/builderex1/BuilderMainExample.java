@@ -1,11 +1,11 @@
-package com.example.demo.builder.builderex1;
+package com.example.demo.creational.builder.builderex1;
 
 
-import com.example.demo.builder.builderex1.builder.ConcreteProductBuilder;
-import com.example.demo.builder.builderex1.builder.Director;
-import com.example.demo.builder.builderex1.builder.ProductBuilder;
-import com.example.demo.builder.builderex1.chainbuilder.ConcreteFluentProductBuilder;
-import com.example.demo.builder.builderex1.chainbuilder.FluentProductBuilder;
+import com.example.demo.creational.builder.builderex1.builder.ConcreteProductBuilder;
+import com.example.demo.creational.builder.builderex1.builder.Director;
+import com.example.demo.creational.builder.builderex1.builder.ProductBuilder;
+import com.example.demo.creational.builder.builderex1.chainbuilder.ConcreteFluentProductBuilder;
+import com.example.demo.creational.builder.builderex1.chainbuilder.FluentProductBuilder;
 
 public class BuilderMainExample {
 

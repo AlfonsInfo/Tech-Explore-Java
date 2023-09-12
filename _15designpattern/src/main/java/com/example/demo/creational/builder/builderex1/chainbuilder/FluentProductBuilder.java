@@ -1,6 +1,6 @@
-package com.example.demo.builder.builderex1.chainbuilder;
+package com.example.demo.creational.builder.builderex1.chainbuilder;
 
-import com.example.demo.builder.builderex1.Product;
+import com.example.demo.creational.builder.builderex1.Product;
 
 public interface FluentProductBuilder {
     FluentProductBuilder buildPart1(String part1);
