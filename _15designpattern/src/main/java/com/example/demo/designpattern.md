@@ -10,4 +10,33 @@
 - Prototype
 - Singleton
 - Abstract Factory
-- Object Pool****
+- Object Pool
+
+
+# Structural Design Pattern
+- Adapter Pattern
+- Bridge Pattern
+- Composite Pattern
+- Decorator Pattern
+- Facade Pattern
+- Flyweight Pattern
+- Proxy Pattern
+- Composite Pattern
+- Structural Pattern for class and object composition
+- Object Pool pattern
+- Module Pattern
+
+
+# Behavioral Design Pattern
+
+- Observer Pattern
+- Strategy Pattern
+- State Pattern
+- Chain of Responsibility Pattern
+- Visitor Pattern
+- Interpreter Pattern
+- Momento Pattern
+- Template Method Pattern
+- Mediator Pattern
+- Iterator Pattern
+- Command Pattern
