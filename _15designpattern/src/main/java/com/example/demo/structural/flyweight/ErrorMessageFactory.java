@@ -20,7 +20,7 @@ public class ErrorMessageFactory {
                 new SystemErrorMessage("A genetic error of type $errorCode occured. Please refer to:\n",
                         "http://google.com/q="));
         errorMessages.put(ErrorType.PageNotFoundError,
-                new SystemErrorMessage("Page not foun. An error of type $errorCode occured. Please refer to:\n",
+                new SystemErrorMessage("Page not found. An error of type $errorCode occured. Please refer to:\n",
                         "http://google.com/q="));
     }
 

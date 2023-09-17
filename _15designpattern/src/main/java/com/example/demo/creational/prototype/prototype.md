@@ -1,5 +1,5 @@
 # Prototype Design Pattern
-- Allows you create new object by copying an existin object, known as prototype
+- Allows you create new object by copying an existing object, known as prototype
 - its used when the cost of creating an object is more expensive or complex than copying an existing one
 - pattern is particularly useful when you want to create multiples instances of objects with similar initial state
 

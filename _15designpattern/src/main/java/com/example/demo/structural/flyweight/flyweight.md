@@ -12,3 +12,22 @@
 - Flyweight interfaces
 - Flyweight Concrete
 - Flyweight Factory
+
+
+# Implementation Considerations
+- A factory is necessary with flyweight design pattern as client code needs easy way to get hold of shared flyweight. Also number of shared instances can be large so a central place is good strategy to keep track all of them
+  - Flyweight intrinsic state should be immutable for succesful use of flyweight pattern
+
+
+# Examples of flyweight  
+- Java.lang.integer, Short, Byte
+
+
+# Comparison & Contrast with object pool
+- State of flyweight object is divided. Client must provided part of state to it
+- in typical usage client will not changed intrinsic state of flyweights
+
+
+# Flyweight pitfalls
+- Runtime cost may be added for maintaining extrinsic state. Client code has to either maintain it or compute it every time it needs to use flyweights.
+- its often difficult to find candidate object for flyweights. Graphical app benefit heavily from this pattern however typical web app amy not have a lot of use this pattern.
