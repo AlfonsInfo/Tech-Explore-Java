@@ -1,11 +1,15 @@
 package belajar.thread;
 
+import java.util.Objects;
+
 /**
  * Hello world!
  *
  */
 public class App 
 {
+    //need to be volatile so program dont use cache value
+    public static volatile String message;
     public static void main( String[] args ) throws InterruptedException {
         //simulasiAsynchronousProcess();
         //threadSleep();
@@ -15,6 +19,29 @@ public class App
         //threadState();
         //threadDaemonUserDemo();
         //demoOfRaceCondition();
+        simpleThreadCommunication();
+
+    }
+    public static void simpleThreadCommunication() throws InterruptedException {
+        Thread threadPrint =  new Thread(() -> {
+            while(message == null){}
+            System.out.println(message);
+        });
+
+        Thread threadDefine =  new Thread(() -> {
+            try {
+                Thread.sleep(1000L);
+                message = "Alfons Ganteng";
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+
+        });
+
+        threadDefine.start();
+        threadPrint.start();
+        threadDefine.join();
+        threadPrint.join();
     }
 
     private static void demoOfRaceCondition() throws InterruptedException {
