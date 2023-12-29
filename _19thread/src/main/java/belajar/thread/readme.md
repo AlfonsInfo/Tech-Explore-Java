@@ -99,3 +99,30 @@
 - shutdown -> pekerjaan belum dikerjakan akan di ignore
 - shutdownNow -> pekerjaannya akan direturnkan (return runnable)
 - Jika menunggu pekerjaan selesai -> awaitTermination();
+
+# Rejected Handler
+- Apa yang terjadi jika queue penuh & semua thread sedang melakukan eksekusi code tertentu ?
+- Secara otomatis dihandler RejectedExecutionHandler
+- Secara default, implementasinya akan mengembalikan exception RejectedExecutionException
+- Jika ingin mengubahnya kita bisa membuat implementasi sendiri
+
+
+# ExecutorService
+
+- Jika kita perhatikan, ThreadpoolExecutor merupakan implementasi dari interface Execturo dan ExecutorService
+- Jadi saat membuat ThreadpoolExecutor kita sebenanrya membuat Executor Service
+- Biasanya jarang kita membuat ThreadPool secara manual
+
+# Executors
+
+- ExecutorService adalah interface, implementasinya ada ThreadPoolExecutor dan Executors(lebih mudah untuk digunakan)
+- Executors merupakan class utility untuk membantu kita membuat objek ExecutorService secara mudah
+- impelementasi Executors menggunakan ThreadpoolExecutor, hanya saja tidak perlu pusing melakukan pengaturan Threadpool seccara manual
+- Method :
+  - newFixedThreadPool(n)
+  - newSingleThreadExecutor
+  - newCacheThreadPool****
+
+# Queue Executors
+- Threadpool yang dibuat memiliki kapasitas queue yang tidak terbatas
+- Jika terlalu banyak runnable task didalam queue, memori penyimpanan yang terpakai akan semakin besar
