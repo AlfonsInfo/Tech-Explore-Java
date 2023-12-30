@@ -1,0 +1,4 @@
+# Type Erasure
+
+Type erasure adalah karakteristik dari Java Generics di mana informasi tipe yang digunakan selama kompilasi dihapus (erased) selama proses kompilasi, dan program Java menggunakan tipe generik dihapus selama runtime. Pengecekan tipe pada saat kompilasi membantu menjaga keamanan tipe pada waktu kompilasi, sementara type erasure memungkinkan integrasi yang mulus dengan kode yang tidak menggunakan generics.
+Namun, saat runtime, Java menggunakan informasi tipe yang tersedia (biasanya melibatkan reflexi) untuk memastikan keselamatan tipe pada saat runtime. Jika Anda mencoba melakukan operasi yang tidak aman terkait tipe setelah type erasure, Anda dapat mendapatkan peringatan atau kesalahan saat runtime.
