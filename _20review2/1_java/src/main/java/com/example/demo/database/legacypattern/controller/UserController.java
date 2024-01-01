@@ -1,6 +1,5 @@
 package com.example.demo.database.legacypattern.controller;
 
-import com.example.demo.database.legacypattern.connection.DbConnection;
 import com.example.demo.database.legacypattern.dao.UserDao;
 import com.example.demo.database.legacypattern.model.User;
 
