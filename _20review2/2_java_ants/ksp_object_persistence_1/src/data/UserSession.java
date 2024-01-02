@@ -4,6 +4,8 @@ import model.User;
 
 public class UserSession {
     private static User user;
+    
+    private UserSession(){}
 
     public static User getUser() {
         return user;

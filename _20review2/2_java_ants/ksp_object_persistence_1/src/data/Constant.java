@@ -24,6 +24,7 @@ public class Constant {
         //MODEL CONTEXT
         public static final String USER = " USER ";
         public static final String PRODUCT = " PRODUCT ";
+        public static final String TRANSACTION = " TRANSACTION ";
         
         public static final String SUCCESS = "SUCCESS ";
         public static final String SPACES = " ";
@@ -69,6 +70,19 @@ public class Constant {
         public static final String READ_PRODUCT_SUCCESS = READ_PRODUCT + SUCCESS;
         public static final String DELETE_PRODUCT_SUCCESS =DELETE_PRODUCT+ SUCCESS;
         
+        
+        //TRANSACTION 
+    
+        public static final String CREATE_TRANSACTION = CREATE + TRANSACTION;
+        public static final String UPDATE_TRANSACTION = UPDATE + TRANSACTION;
+        public static final String READ_TRANSACTION = READ + TRANSACTION;
+        public static final String DELETE_TRANSACTION = DELETE + TRANSACTION; 
+        
+        
+        public static final String CREATE_TRANSACTION_SUCCESS = CREATE_TRANSACTION + SUCCESS;
+        public static final String UPDATE_TRANSACTION_SUCCESS = UPDATE_TRANSACTION + SUCCESS;
+        public static final String READ_TRANSACTION_SUCCESS = READ_TRANSACTION + SUCCESS;
+        public static final String DELETE_TRANSACTION_SUCCESS =DELETE_TRANSACTION+ SUCCESS;
         
         
     }

@@ -1,6 +1,7 @@
 package view;
 
-import controller.UserController;;
+import controller.UserController;import data.UserSession;
+;
 import model.User;
 
 
@@ -26,6 +27,7 @@ public class CommanApp {
         //demoCreateUser();
        //demoLogin();
        //demoRead();
+       // System.out.println(UserSession.getUser());
     }
     
     

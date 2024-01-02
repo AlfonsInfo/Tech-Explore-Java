@@ -2,13 +2,14 @@ package dao;
 
 import connection.DbConnection;
 import data.Constant;
+import data.UserSession;
 import model.User;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-import utils.CommonHelper;
+import utils.Helper;
 
 public class UserDao {
     private static final String CREATE_QUERY = "INSERT INTO users (id, username, password) values ( ? , ?, ? )" ;
@@ -25,16 +26,16 @@ public class UserDao {
             statement.setString(3, user.getPassword());
   
             int result = statement.executeUpdate();
-            CommonHelper.printLog(Constant.LogMessage.CREATE_USER_SUCCESS, CommonHelper.getCurrentMethodName(), "RESULT :  "+ result  );
+            Helper.printLog(Constant.LogMessage.CREATE_USER_SUCCESS, Helper.getCurrentMethodName(), "RESULT :  "+ result  );
         }catch(SQLException e){
-            CommonHelper.printLogError(e.getMessage(), CommonHelper.getCurrentMethodName());
+            Helper.printLogError(e.getMessage(), Helper.getCurrentMethodName());
         }finally{
             DbConnection.closeConnection();
         }
     }
     
     public List<User> readUser(){
-        String methodName = CommonHelper.getCurrentMethodName();
+        String methodName = Helper.getCurrentMethodName();
         List<User> users = new ArrayList<>();
         try{
             DbConnection.makeConnection();
@@ -45,18 +46,18 @@ public class UserDao {
                     user.setUsername(resultSet.getString("username"));
                     users.add(user);
                 }
-               CommonHelper.printLog(Constant.LogMessage.READ_USER, methodName, users.toString());
+               Helper.printLog(Constant.LogMessage.READ_USER, methodName, users.toString());
             }
         }catch(SQLException e){
-            CommonHelper.printLogError(e.getMessage(), methodName);
+            Helper.printLogError(e.getMessage(), methodName);
         }finally{
             DbConnection.closeConnection();
         }
         return users;
     }
     
-    public void loginUser(User user){
-        String methodName = CommonHelper.getCurrentMethodName();
+    public boolean loginUser(User user){
+        String methodName = Helper.getCurrentMethodName();
          try{
             DbConnection.makeConnection();
             ResultSet resultSet;
@@ -65,16 +66,24 @@ public class UserDao {
                 statement.setString(2, user.getPassword());
                 resultSet = statement.executeQuery();
                 if(resultSet.next()) {
-                    System.out.println(resultSet.getString(1));
-                    System.out.println("Login Success");
+                    User loginUser = new User();
+                    loginUser.setId(resultSet.getString("id"));
+                    loginUser.setUsername(resultSet.getString("username"));
+                    loginUser.setPassword(resultSet.getString("password"));
+                    UserSession.setUser(loginUser);
+                    resultSet.close();
+                    return true;
                 }else{
-                    System.out.println(" Login Failed");
-                    //LogHelper.errorMessage("Error", "Login");
+                    resultSet.close();
+                    return false;
                 }
             }
-            resultSet.close();
         }catch(SQLException e){
-            CommonHelper.printLogError(e.getMessage(), methodName);
+            Helper.printLogError(e.getMessage(), methodName);
+            return false;
+        }catch(Exception e){
+            Helper.printLogError(e.getMessage(), methodName);
+            return false;
         }finally{
             DbConnection.closeConnection();
         }

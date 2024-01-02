@@ -15,8 +15,8 @@ public class UserController {
         return userDao.readUser();
     }
     
-    public void loginUser(User user){
-        userDao.loginUser(user);
+    public boolean loginUser(User user){
+        return userDao.loginUser(user);
     }
 
     

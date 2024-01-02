@@ -16,8 +16,15 @@ public class Product {
 
     public Product() {
     }
-    
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+    
     public Product(String name, Double price, Integer stock) {
         this.name = name;
         this.price = price;

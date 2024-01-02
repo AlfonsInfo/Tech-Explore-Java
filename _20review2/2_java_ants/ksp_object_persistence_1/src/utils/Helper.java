@@ -3,9 +3,9 @@ package utils;
 import java.util.Date;
 import java.util.Objects;
 
-public class CommonHelper {
+public class Helper {
     
-     private CommonHelper(){}
+     private Helper(){}
 
     public static String getCurrentTime(){
         Date date = new Date();
