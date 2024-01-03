@@ -1,6 +1,6 @@
 package view;
 
-import controller.UserController;import data.UserSession;
+import controller.UserController;
 ;
 import model.User;
 

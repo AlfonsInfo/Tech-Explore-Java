@@ -6,23 +6,25 @@ package view;
 
 import controller.UserController;
 import java.awt.Image;
-import javax.security.auth.callback.ConfirmationCallback;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import model.User;
 
-/**
- *
- * @author A412DA
- */
+
 public class LoginView extends javax.swing.JFrame {
     
     //Define variable
-    
     UserController userController = new UserController();
+    
+    //constructor
     public LoginView() {
         initComponents();
         scaleIcon("/assets/icon_user.png", iconAdmin,400,400);
+    }
+    
+    private void resetLoginForm(){
+        inputUsername.setText("");
+        inputPassword.setText("");
     }
 
     /**
@@ -38,15 +40,14 @@ public class LoginView extends javax.swing.JFrame {
         iconAdmin = new javax.swing.JLabel();
         textAdmin = new javax.swing.JLabel();
         rightPanel = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        loginTitle = new javax.swing.JLabel();
         inputPassword = new javax.swing.JTextField();
         inputUsername = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        loginButton = new javax.swing.JButton();
         labelUsername = new javax.swing.JLabel();
         labelUsername1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setAlwaysOnTop(true);
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(1000, 800));
         setResizable(false);
@@ -88,11 +89,11 @@ public class LoginView extends javax.swing.JFrame {
 
         rightPanel.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setFont(new java.awt.Font("Segoe UI Emoji", 1, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("LOGIN");
+        loginTitle.setBackground(new java.awt.Color(255, 255, 255));
+        loginTitle.setFont(new java.awt.Font("Segoe UI Emoji", 1, 48)); // NOI18N
+        loginTitle.setForeground(new java.awt.Color(0, 0, 0));
+        loginTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        loginTitle.setText("LOGIN");
 
         inputPassword.setBackground(new java.awt.Color(153, 204, 255));
         inputPassword.setForeground(new java.awt.Color(0, 0, 0));
@@ -116,17 +117,17 @@ public class LoginView extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(0, 153, 255));
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Login");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        loginButton.setBackground(new java.awt.Color(0, 153, 255));
+        loginButton.setForeground(new java.awt.Color(255, 255, 255));
+        loginButton.setText("Login");
+        loginButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+                loginButtonMouseClicked(evt);
             }
         });
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        loginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                loginButtonActionPerformed(evt);
             }
         });
 
@@ -142,13 +143,13 @@ public class LoginView extends javax.swing.JFrame {
             rightPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(rightPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(loginTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(rightPanelLayout.createSequentialGroup()
                 .addGap(75, 75, 75)
                 .addGroup(rightPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelUsername1, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 386, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(loginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 386, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(inputUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 386, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(inputPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 386, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(89, Short.MAX_VALUE))
@@ -157,7 +158,7 @@ public class LoginView extends javax.swing.JFrame {
             rightPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(rightPanelLayout.createSequentialGroup()
                 .addGap(47, 47, 47)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(loginTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(labelUsername)
                 .addGap(18, 18, 18)
@@ -167,7 +168,7 @@ public class LoginView extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(inputPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(46, 46, 46)
-                .addComponent(jButton1)
+                .addComponent(loginButton)
                 .addContainerGap(451, Short.MAX_VALUE))
         );
 
@@ -184,23 +185,26 @@ public class LoginView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_inputUsernameActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_loginButtonActionPerformed
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+    private void loginButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginButtonMouseClicked
        User user = new User();
        user.setUsername(inputUsername.getText());
        user.setPassword(inputPassword.getText());
        boolean isSuccessLogin =  userController.loginUser(user);
+       
        if(isSuccessLogin){
+           //Ketika login berhasil, tampilan saat ini disembunyikan dan tampilkan homeview.
            HomeView homeview = new HomeView();
            this.dispose();
            homeview.setVisible(true);
        }else{
            javax.swing.JOptionPane.showConfirmDialog(this.rootPane, "Login Gagal", "Pesan Eror", JOptionPane.YES_OPTION);
+           resetLoginForm();
        }
-    }//GEN-LAST:event_jButton1MouseClicked
+    }//GEN-LAST:event_loginButtonMouseClicked
 
     /**
      * @param args the command line arguments
@@ -252,11 +256,11 @@ public class LoginView extends javax.swing.JFrame {
     private javax.swing.JLabel iconAdmin;
     private javax.swing.JTextField inputPassword;
     private javax.swing.JTextField inputUsername;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel labelUsername;
     private javax.swing.JLabel labelUsername1;
     private javax.swing.JPanel leftPanel;
+    private javax.swing.JButton loginButton;
+    private javax.swing.JLabel loginTitle;
     private javax.swing.JPanel rightPanel;
     private javax.swing.JLabel textAdmin;
     // End of variables declaration//GEN-END:variables
