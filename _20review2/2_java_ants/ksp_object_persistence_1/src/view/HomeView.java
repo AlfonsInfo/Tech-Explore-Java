@@ -2,6 +2,7 @@ package view;
 
 import controller.ProductController;
 import data.UserSession;
+import exception.CustomException;
 import java.awt.Image;
 import java.util.Calendar;
 import java.util.List;
@@ -34,12 +35,19 @@ public final  class HomeView extends javax.swing.JFrame {
         greetingUser();
         setEnabledSearchForUpdateAndDelete(false);
         setEnableInputUpsert(false);
+        
     }
     
     public void showDialog(String message, String title){
          javax.swing.JOptionPane.showConfirmDialog(this.rootPane, message, title, JOptionPane.YES_OPTION);
     }
     
+    public void resetInputForm(){
+            idProductInput.setText("");
+            productNameInput.setText("");
+            priceInput.setText("");
+            stockInput.setText("");
+    }
     
     private void setViewBaseOnState(State statecondition){
         
@@ -55,7 +63,6 @@ public final  class HomeView extends javax.swing.JFrame {
                 deleteButton.setEnabled(false);
                 cancelButton.setEnabled(true);
                 confirmButton.setEnabled(true);
-
                 break;
 
             case SEARCH_DATA_FOR_UPDATED:
@@ -106,8 +113,8 @@ public final  class HomeView extends javax.swing.JFrame {
                 deleteButton.setEnabled(true);
                 idProductInput.setText("");
                 searchInput.setText("");
-                 confirmButton.setText("Confirm");
-              
+                confirmButton.setText("Confirm");
+                resetInputForm();
                  break;
         }
     }
@@ -492,6 +499,7 @@ public final  class HomeView extends javax.swing.JFrame {
             product.setPrice( Double.valueOf(priceInput.getText()) );
             product.setStock(Integer.valueOf(stockInput.getText()));
             productController.createData(product);
+            showDialog("Berhasil Menambahkan Produk", "Sukses");
         }else if( Objects.equals(stateCondition,  State.DATA_FOR_UPDATED)){
             String idForUpdated =idProductInput.getText();
             Product product =new Product();
@@ -499,15 +507,19 @@ public final  class HomeView extends javax.swing.JFrame {
             product.setPrice( Double.valueOf(priceInput.getText()) );
             product.setStock(Integer.valueOf(stockInput.getText()));
             productController.updateData(idForUpdated, product);
+            showDialog("Berhasil Memperbarui data Produk", "Sukses");
         }else if(Objects.equals(stateCondition, State.DATA_FOR_DELETED)){
-            
+            showDialog("Berhasil Hapus Produk", "Sukses");
         }
+        setViewBaseOnState(State.DEFAULT);
         }catch(NumberFormatException e){
             Helper.printLogError(e.getMessage(), null);
             showDialog("harga dan stok harus angka", COMMON_ERROR_TITLE);
+            resetInputForm();
         }catch(Exception e){
             Helper.printLogError(e.getMessage(), Helper.getCurrentMethodName());
             showDialog(COMMON_ERROR_MESSAGE, COMMON_ERROR_TITLE);
+
         }
     }//GEN-LAST:event_confirmButtonActionPerformed
 
@@ -532,13 +544,12 @@ public final  class HomeView extends javax.swing.JFrame {
                 setViewBaseOnState(State.DATA_FOR_DELETED);
             }
         }else{
-            idProductInput.setText("");
-            productNameInput.setText("");
-            priceInput.setText("");
-            stockInput.setText("");
-            
+            resetInputForm();
+                        
             //notif
         }
+        }catch(CustomException e){
+            showDialog(e.getMessage(), COMMON_ERROR_TITLE);
         }catch(Exception e){
             showDialog(COMMON_ERROR_MESSAGE, COMMON_ERROR_TITLE);
         }

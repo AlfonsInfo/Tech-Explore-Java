@@ -4,10 +4,13 @@ package data;
 public class Constant {
     //Menyimpan data-data konstan secara terpusat
     
+    private Constant(){}
     //Konstan untuk Database 
     //Tujuan konstan : menghindari Typing mistakes (Kesalahan seperti ini terkadang lebih susah untuk didebug karena tidak terprediksi)
     public  static class Db{
-        
+
+        private Db() {
+        }
         public static final String DB_URL = "jdbc:mysql://";
         public static final String PATH = "localhost:3306/";
         public static final String DATABASE_NAME = "ksp_object_persistence";
@@ -20,6 +23,9 @@ public class Constant {
     }
     
     public static class LogMessage{
+
+        private LogMessage() {
+        }
         
         //MODEL CONTEXT
         public static final String USER = " USER ";
@@ -87,5 +93,13 @@ public class Constant {
         
     }
     
+    
+    public static class ExceptionMessage{
+
+        private ExceptionMessage() {
+        }
+        
+        public static final String SERVER_ERROR = "Terjadi Kesalahan Pada Server Saat memproses permintaan";
+    }
     
 }

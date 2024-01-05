@@ -8,9 +8,10 @@ import data.Constant;
 import utils.Helper;
 
 public class DbConnection {
+    
+    private DbConnection(){}
+    
     public static Connection connection;
-    
-    
     public static void makeConnection(){
         String methodName = Helper.getCurrentMethodName();
          Helper.printLog(Constant.LogMessage.OPEN_CONNECTION,methodName, null);

@@ -9,14 +9,20 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import utils.Helper;
 
 public class ProductDao {
     private static final String CREATE_QUERY = "INSERT INTO products  ( name, price, stock) values (  ? , ? , ? )";
     private static final String FIND_BY_ID = "SELECT * FROM products where id = ?";
     private static final String READ_AND_SEARCH_QUERY = "SELECT * FROM products WHERE id LIKE ? OR name LIKE ? OR price LIKE ? OR stock LIKE ?";
-    private static final String UPDATE_QUERY = "UPDATE INTO products SET name =  ? , price = ? , stock = ? WHERE id = ?";
+    private static final String UPDATE_QUERY = "UPDATE  products SET name =  ? , price = ? , stock = ? WHERE id = ?";
     private static final String DELETE_QUERY = "DELETE FROM products WHERE id  = ? ";
+    
+    private static final String ID_PRODUCT = "id";
+    private static final String NAME_PRODUCT = "name";
+    private static final String PRICE_PRODUCT = "stock";
+    private static final String STOCK_PRODUCT = "price";
     
     
     public void createProduct(Product product){
@@ -30,6 +36,7 @@ public class ProductDao {
             Helper.printLog(Constant.LogMessage.CREATE_USER_SUCCESS, Helper.getCurrentMethodName(), "RESULT :  "+ result  );
         }catch(SQLException e){
             Helper.printLogError(e.getMessage(), Helper.getCurrentMethodName());
+            throw new CustomException(Constant.ExceptionMessage.SERVER_ERROR);
         }finally{
             DbConnection.closeConnection();
         }
@@ -51,9 +58,9 @@ public class ProductDao {
                     while(resultSet.next()){
                         Product product = new Product();
                         product.setId(resultSet.getString("id"));
-                        product.setName(resultSet.getString("name"));
-                        product.setPrice(resultSet.getDouble("price"));
-                        product.setStock(resultSet.getInt("stock"));
+                        product.setName(resultSet.getString(NAME_PRODUCT));
+                        product.setPrice(resultSet.getDouble(PRICE_PRODUCT));
+                        product.setStock(resultSet.getInt(STOCK_PRODUCT));
                         products.add(product);
                     }
                 }
@@ -61,6 +68,7 @@ public class ProductDao {
             }
         }catch(SQLException e){
             Helper.printLogError(e.getMessage(), methodName);
+            throw new CustomException(Constant.ExceptionMessage.SERVER_ERROR);
         }finally{
             DbConnection.closeConnection();
         }
@@ -79,7 +87,7 @@ public class ProductDao {
             Helper.printLog(Constant.LogMessage.CREATE_USER_SUCCESS, Helper.getCurrentMethodName(), "RESULT :  "+ result  );
         }catch(SQLException e){
             Helper.printLogError(e.getMessage(), Helper.getCurrentMethodName());
-            throw new CustomException("SQL EXCEPTION"); // rethrow exception jika ingin di hendle juga oleh view layers
+            throw new CustomException(Constant.ExceptionMessage.SERVER_ERROR);// rethrow exception jika ingin di handle juga oleh view layers
         }finally{
             DbConnection.closeConnection();
         }
@@ -108,18 +116,19 @@ public class ProductDao {
 
                 
                 try (ResultSet resultSet = statement.executeQuery()) {
-                    while(resultSet.next()){
-                        product.setId(resultSet.getString("id"));
-                        product.setName(resultSet.getString("name"));
-                        product.setPrice(resultSet.getDouble("price"));
-                        product.setStock(resultSet.getInt("stock"));
-                        break;
+                    if(Objects.equals(false, resultSet.next())){
+                        throw new CustomException("Data tidak ditemukan");
                     }
+                        product.setId(resultSet.getString(ID_PRODUCT));
+                        product.setName(resultSet.getString(NAME_PRODUCT));
+                        product.setPrice(resultSet.getDouble(PRICE_PRODUCT));
+                        product.setStock(resultSet.getInt(STOCK_PRODUCT));
                 }
                Helper.printLog(Constant.LogMessage.READ_USER_SUCCESS, methodName, product.toString());
             }
         }catch(SQLException e){
             Helper.printLogError(e.getMessage(), methodName);
+            throw new CustomException(Constant.ExceptionMessage.SERVER_ERROR);
         }finally{
             DbConnection.closeConnection();
         }

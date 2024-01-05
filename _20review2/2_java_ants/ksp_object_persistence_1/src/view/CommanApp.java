@@ -28,6 +28,11 @@ public class CommanApp {
        //demoLogin();
        //demoRead();
        // System.out.println(UserSession.getUser());
+       
+          String data = null;
+        String data2 = "test";
+
+        System.out.println(data.equalsIgnoreCase(data2));
     }
     
     

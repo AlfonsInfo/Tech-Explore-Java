@@ -17,6 +17,7 @@ public class UserDao {
     private static final String UPDATE_BY_ID = "UPDATE users SET username = ? , password = ? Where id = ?";
     private static final String DELETE_USER_BY_ID = "DELETE FROM USERS WHERE id  = ? ";
     private static final String LOGIN_QUERY = "SELECT * FROM users where username = ? and password = ? ";
+
     
     public void createUser(User user){
         try(PreparedStatement statement = DbConnection.connection.prepareStatement(CREATE_QUERY)){
