@@ -1,0 +1,11 @@
+
+]
+java:S1854"@Remove this useless assignment to local variable "contohString".(ºÚªÿ8€≠‹èÓ1
+N
+java:S1481"1Remove this unused "contohString" local variable.(ºÚªÿ8€≠‹èÓ1
+]	java:S125"<This block of commented-out lines of code should be removed.(øåì±˘ˇˇˇˇ8€≠‹èÓ1
+=
+java:S3626"Remove this redundant jump.(ë±øŒ˛ˇˇˇˇ8≈Ì‰èÓ1
+L	java:S106+"+Replace this use of System.out by a logger.(Ê®§ö¯ˇˇˇˇ8ÃÌ‰èÓ1
+M
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(˜âÓÉ8€≠‹èÓ1
