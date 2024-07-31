@@ -53,3 +53,7 @@ c
 3src/main/java/org/example/pdf/pdfbox/PdfToText.java,b\2\b2ad77278f7a22aaa3e818416287d854d27aed67
 e
 5src/main/java/org/example/qrcode/QRCodeGenerator.java,6\a\6ab73cf7b4b6d37a00cd69909a0990e1d827af19
+o
+?src/main/java/org/example/pdf/signPdf/PDFImageStampExample.java,0\b\0b99373a9809f98a236888427e7d63252d83a257
+c
+3src/main/java/org/example/pdf/signPdf/PdfStamp.java,2\c\2c18d4d74e2d1be2d70a96b550e370e3b725ce73
