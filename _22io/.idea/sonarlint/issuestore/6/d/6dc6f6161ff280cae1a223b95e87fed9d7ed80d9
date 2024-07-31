@@ -1,0 +1,6 @@
+
+Š
+java:S2095"HUse try-with-resources or close this "FileWriter" in a "finally" clause.(Ê¬Ä98¦ºìº2J$ea1e39b1-791b-4394-8005-31906223a862
+
+java:S2095"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(Îƒé‚8¤ºìº2J$5dd3893d-391f-4b76-9575-f8b100d96510
+‰	java:S899"BDo something with the "boolean" value returned by "createNewFile".(Ğ’Íùÿÿÿÿ8áºìº2J$2b0b0b90-f1eb-4d96-85fa-307c21908599

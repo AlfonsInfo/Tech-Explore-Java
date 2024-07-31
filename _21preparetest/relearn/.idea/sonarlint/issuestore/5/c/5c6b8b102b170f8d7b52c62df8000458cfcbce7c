@@ -1,7 +1,10 @@
 
-j
-java:S2095"HUse try-with-resources or close this "Connection" in a "finally" clause.(œÅøËÿÿÿÿÿ8’†ßî1
-i
-java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(é°Áµşÿÿÿÿ8’†ßî1
-K
-java:S2115")Add password protection to this database.(œÅøËÿÿÿÿÿ8¡Êˆßî1
+
+java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(é°Áµşÿÿÿÿ8›ÕÜÀõ1J$be0da82d-6a4d-44f9-8b39-ceb6b3d2f66a
+
+java:S2095"HUse try-with-resources or close this "Connection" in a "finally" clause.(œÅøËÿÿÿÿÿ8šÕÜÀõ1J$499d75fd-2d67-4173-ad99-17803059b6a4
+q
+java:S2115")Add password protection to this database.(œÅøËÿÿÿÿÿ8¡Êˆßî1J$2d578ac0-b17a-436d-be41-5dfb4c16cb84
+ƒ	java:S125"<This block of commented-out lines of code should be removed.(õù§İúÿÿÿÿ8·ûÜÀõ1J$708cefe8-c755-402f-8688-bf523ce33f2d
+q
+java:S1128"/Remove this unused import 'java.sql.ResultSet'.(ˆóÚw8ûûÜÀõ1J$f49ad424-009f-41bb-b9f0-6acd32d59766

@@ -4,6 +4,7 @@ import lombok.SneakyThrows;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class Main {
@@ -21,6 +22,11 @@ public class Main {
         Statement statement = connection.createStatement();
         String sql = "INSERT INTO product (name, type, price, stock) VALUES ('produk baru', 'jenis produk', 100.00, 10)";
         statement.execute(sql);
+        //        ResultSet resultSet = statement.executeQuery("SELECT * FROM table_name");
+        //
+        //        while (resultSet.next()) {
+        //            System.out.println(resultSet.getString("column_name"));
+        //        }
         statement.close();
         connection.close();
     }

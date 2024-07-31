@@ -1,0 +1,9 @@
+
+k
+java:S5411"(Use a primitive boolean expression here.(·®İ±8‡å›º2J$f94e849e-81a1-47e6-915c-322f71bdffae
+}
+java:S1118":Add a private constructor to hide the implicit public one.(ôØÑ£8ªå›º2J$3700b593-9127-4af2-937a-2dacfca4d3ca
+‰	java:S899"BDo something with the "boolean" value returned by "createNewFile".(Ğ’Íùÿÿÿÿ8²å›º2J$61fa89d6-96f4-436d-81b9-a651b47adc78
+–
+java:S4042"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(«ÓÑ½úÿÿÿÿ8¹å›º2J$60c28f4f-0e13-42df-b54f-4b6c2e9cb362
+‰	java:S899"BDo something with the "boolean" value returned by "createNewFile".(Ğ’Íùÿÿÿÿ8ı¦œº2J$058f6e08-f848-4cb0-9d79-facba001635e
