@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="871e170b-03c5-4b68-985b-ecd7c04416e7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/docs/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/database/ConnectionPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/database/DatabaseConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/database/DriverRegistration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_22io/.idea/sonarlint/issuestore/0/b/0ba1b9c7a4878802f938e331cc2d8a042087ec6b" beforeDir="false" afterPath="$PROJECT_DIR$/../../_22io/.idea/sonarlint/issuestore/0/b/0ba1b9c7a4878802f938e331cc2d8a042087ec6b" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_22io/.idea/sonarlint/issuestore/0/b/0bd3308da046830bb463090e57e21d7d6a14ba81" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_22io/.idea/sonarlint/issuestore/4/d/4d1ac4f187fe2fb449086a6e9bc39456c17d17de" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_22io/.idea/sonarlint/issuestore/6/3/632945a956353281cd37ecc60176fe90ca3e2435" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_22io/.idea/sonarlint/issuestore/6/a/6ab73cf7b4b6d37a00cd69909a0990e1d827af19" beforeDir="false" afterPath="$PROJECT_DIR$/../../_22io/.idea/sonarlint/issuestore/6/a/6ab73cf7b4b6d37a00cd69909a0990e1d827af19" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_22io/.idea/sonarlint/issuestore/6/c/6c60ea9e1814339b54fa8219e128c6e21304a3f3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_22io/.idea/sonarlint/issuestore/6/d/6dc6f6161ff280cae1a223b95e87fed9d7ed80d9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_22io/.idea/sonarlint/issuestore/7/7/773aeb1852672aa4806fac9a99332cd3725449aa" beforeDir="false" afterPath="$PROJECT_DIR$/../../_22io/.idea/sonarlint/issuestore/7/7/773aeb1852672aa4806fac9a99332cd3725449aa" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_22io/.idea/sonarlint/issuestore/8/8/8894616055bc840a0c7527316379dcc745ed1a1a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_22io/.idea/sonarlint/issuestore/8/c/8cab91f4004827ee16721c8cae92e47eba639225" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_22io/.idea/sonarlint/issuestore/9/f/9f0173a0991602f54d97da1942d02d143a3e6877" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_22io/.idea/sonarlint/issuestore/d/6/d6296504a971ae73eb52eaad63c246f82e459d0a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_22io/.idea/sonarlint/issuestore/e/f/ef113f7a2bd9e4167c652eede13f2880b41e1390" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_22io/.idea/sonarlint/issuestore/f/4/f4fc9675d689bc630b91aeb7721aa4b7dcf29879" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_22io/.idea/sonarlint/issuestore/f/c/fcc40a843d47edbe13a1e889aa5fc5390858f385" beforeDir="false" afterPath="$PROJECT_DIR$/../../_22io/.idea/sonarlint/issuestore/f/c/fcc40a843d47edbe13a1e889aa5fc5390858f385" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_22io/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../../_22io/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_22io/.idea/sonarlint/securityhotspotstore/0/b/0bd3308da046830bb463090e57e21d7d6a14ba81" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_22io/.idea/sonarlint/securityhotspotstore/4/d/4d1ac4f187fe2fb449086a6e9bc39456c17d17de" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_22io/.idea/sonarlint/securityhotspotstore/6/3/632945a956353281cd37ecc60176fe90ca3e2435" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_22io/.idea/sonarlint/securityhotspotstore/6/c/6c60ea9e1814339b54fa8219e128c6e21304a3f3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_22io/.idea/sonarlint/securityhotspotstore/6/d/6dc6f6161ff280cae1a223b95e87fed9d7ed80d9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_22io/.idea/sonarlint/securityhotspotstore/8/8/8894616055bc840a0c7527316379dcc745ed1a1a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_22io/.idea/sonarlint/securityhotspotstore/8/c/8cab91f4004827ee16721c8cae92e47eba639225" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_22io/.idea/sonarlint/securityhotspotstore/9/f/9f0173a0991602f54d97da1942d02d143a3e6877" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_22io/.idea/sonarlint/securityhotspotstore/d/6/d6296504a971ae73eb52eaad63c246f82e459d0a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_22io/.idea/sonarlint/securityhotspotstore/e/f/ef113f7a2bd9e4167c652eede13f2880b41e1390" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_22io/.idea/sonarlint/securityhotspotstore/f/4/f4fc9675d689bc630b91aeb7721aa4b7dcf29879" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_22io/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../../_22io/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_22io/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../_22io/src/main/java/org/example/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ap-candidat-01&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/AlfonsInfo/Tech-Explore-Java.git&quot;,
+    &quot;accountId&quot;: &quot;ea74951f-f3a3-4470-a478-ba430c11447c&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2obA32eKZuRT9uiSkjqVcGlibwJ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.ConnectionPool.testConnectionPool.executor": "Run",
+    "JUnit.DatabaseConnection.testDatabaseConnection.executor": "Run",
+    "JUnit.DatabaseConnection.testDatabaseConnectionUsedMemory.executor": "Run",
+    "JUnit.DriverRegistration.testDriverRegistration.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.web.browsers",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="JUnit.ConnectionPool.testConnectionPool">
+    <configuration name="ConnectionPool.testConnectionPool" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java-db" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="database.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="database" />
+      <option name="MAIN_CLASS_NAME" value="database.ConnectionPool" />
+      <option name="METHOD_NAME" value="testConnectionPool" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DatabaseConnection.testDatabaseConnection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java-db" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="database.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="database" />
+      <option name="MAIN_CLASS_NAME" value="database.DatabaseConnection" />
+      <option name="METHOD_NAME" value="testDatabaseConnection" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DatabaseConnection.testDatabaseConnectionUsedMemory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java-db" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="database.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="database" />
+      <option name="MAIN_CLASS_NAME" value="database.DatabaseConnection" />
+      <option name="METHOD_NAME" value="testDatabaseConnectionUsedMemory" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DriverRegistration.testDriverRegistration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java-db" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="database.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="database" />
+      <option name="MAIN_CLASS_NAME" value="database.DriverRegistration" />
+      <option name="METHOD_NAME" value="testDriverRegistration" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ConnectionPool.testConnectionPool" />
+        <item itemvalue="JUnit.DatabaseConnection.testDatabaseConnectionUsedMemory" />
+        <item itemvalue="JUnit.DatabaseConnection.testDatabaseConnection" />
+        <item itemvalue="JUnit.DriverRegistration.testDriverRegistration" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.22855.74" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.22855.74" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="871e170b-03c5-4b68-985b-ecd7c04416e7" name="Changes" comment="" />
+      <created>1731127703389</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1731127703389</updated>
+      <workItem from="1731127705553" duration="887000" />
+      <workItem from="1731128643688" duration="1645000" />
+      <workItem from="1731151564398" duration="2502000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
